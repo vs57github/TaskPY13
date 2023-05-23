@@ -1,0 +1,12 @@
+n = int(input("Введите количество рассматриваемых дней: "))
+temperature = list(map(int, input("Введите среднесуточную температуру в каждый день через пробел: ").split()))
+current_len = 0
+max_len = 0
+for t in temperature:
+    if t > 0:
+        current_len += 1
+        if current_len > max_len:
+            max_len = current_len
+    else:
+        current_len = 0
+print("Самая длинная оттепель длилась", max_len, "дней")
